@@ -26,7 +26,7 @@ class PasswordHint(models.Model):
         return str(self.password_belongs_to)+'-'+str(self.created_by.username)
     
     def get_real_password(self):
-        key = self.craeted_by.user_secret_key
+        key = self.created_by.user_secret_key
         cipher_suite = Fernet(key.encode())
         real_password = cipher_suite.decrypt(self.real_password.encode())
         return real_password.decode('utf-8')

@@ -24,8 +24,8 @@
         </div>
     </div>
     <ul class='list-group'>
-        <a class='list-group-item' href='#'>Create Category</a>
-        <a class='list-group-item' href='#'>Create Password</a>
-        <a class='list-group-item' href='#'>Generate Password</a>
+        <a class='list-group-item' href='{% url "passwords:create_category" %}'>Create Category</a>
+        <a class='list-group-item' href='{% url "passwords:create_password" %}'>Create Password</a>
+        <a class='list-group-item' href='{% url "passwords:create_generated_password" %}'>Generate Password</a>
     </ul>
 {% endblock %}
