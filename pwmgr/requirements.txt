@@ -1,0 +1,12 @@
+Package      Version
+------------ -------
+asgiref      3.3.1
+cffi         1.14.5
+cryptography 3.4.7
+Django       3.1.7
+pip          21.0.1
+pycparser    2.20
+pytz         2021.1
+setuptools   54.1.2
+sqlparse     0.4.1
+wheel        0.36.2
