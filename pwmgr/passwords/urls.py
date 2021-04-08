@@ -10,6 +10,7 @@ urlpatterns=[
     path('create_category/', views.create_category, name='create_category'),
     path('create_password/', views.create_password, name='create_password'),
     path('detail/<int:pk>', views.detail_password, name='detail_password'),
+    path('display_password/<int:pk>', views.display_password, name='display_password'),
     path('update_hints/<int:pk>', views.update_hints, name='update_hints'),
     path('update_password/<int:pk>', views.update_password, name='update_password'),
     path('delete_password/<int:pk>', views.delete_password, name='delete_password'),
