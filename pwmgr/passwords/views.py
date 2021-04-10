@@ -80,6 +80,13 @@ def detail_password(request,pk):
     return render(request, 'passwords/detail_password.html',{'passwordObj':passwordDetailObj})
 
 @login_required
+def display_password(request,pk):
+    passwordDetailObj = get_object_or_404(PasswordHint,id=pk)
+    if passwordDetailObj.created_by_id != request.user.id:
+        raise PermissionDenied()
+    return render(request, 'passwords/display_password.html',{'passwordObj':passwordDetailObj})
+
+@login_required
 def delete_password(request,pk):
     if request.method =='POST':
         try:
