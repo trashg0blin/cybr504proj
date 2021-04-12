@@ -15,17 +15,18 @@
         <h3 class='text-primary my-3 text-center'>DASHBOARD</h3>
         <div class='container d-lg-flex d-sm-block my-3'>
             <div class='container_fluid text-center'>
-                <p class='header_para'>
-                Hey <span class='lead m-1'>{{ request.user.username }}</span>, This is your secret key
-                </p>
-                <p><span class='highlight'>{{request.user.user_secret_key}}</span></p>
-                <p>This would be used to perform all your password and file encryption, please do not share this with anyone.</p>
+                <h2 class='header_para'>
+                Hey {{ request.user.username }}!
+                </h2>
+                <h3>Here you can create a password entry and we'll encrypt it, and store it for you!</h3>
             </div>
         </div>
     </div>
     <ul class='list-group'>
         <a class='list-group-item' href='{% url "passwords:create_category" %}'>Create Category</a>
         <a class='list-group-item' href='{% url "passwords:create_password" %}'>Create Password</a>
+        {% comment %}
         <a class='list-group-item' href='{% url "passwords:create_generated_password" %}'>Generate Password</a>
+        {% endcomment %}
     </ul>
 {% endblock %}
