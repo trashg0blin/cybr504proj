@@ -2,12 +2,12 @@ version: '3'
 services:
   web:
     container_name: pwmgr
-    build: ./
+    build: ./pwmgr/
     command: python manage.py runserver 0.0.0.0:8000
     expose:
       - 8000
     env_file:
-      - ./.env.dev
+      - ./pwmgr/.env.dev
     depends_on:
       - db
   db:
