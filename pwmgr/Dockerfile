@@ -18,6 +18,6 @@ RUN export CRYPTOGRAPHY_DONT_BUILD_RUST=1
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-COPY ./pwmgr /code/
+COPY ./ /code/
 
 RUN python /code/manage.py migrate
